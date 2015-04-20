@@ -1,0 +1,21 @@
+The original data source is:https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+Description of this data set can be found at: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The R script (run_analysis.R) performs the following steps to clean up the data from the Human Activity Recognition file. :
+•	Merges the training and test sets to create one data set, namely train/X_train.txt
+•	Test/X_test.txt has a 10299x561 data frame, as in the original description
+•	Train/subject_train.txt with test/subject_test.txt, has  a 10299x1 data frame,
+•	Train/y_train.txt with test/y_test.txt, has a 10299x1 data frame 
+•	All of these have subject IDs and activity IDs.
+•	run_analysis.R reads the file features.txt and extracts only the measurements on the mean and standard deviation for each measurement. This results in a 10299x66 data frame, because only 66 out of 561 attributes are measurements on the mean and standard deviation. 
+•	run_analysis.R also reads activity_labels.txt and applies descriptive activity names to the activities in the data set:
+•	walking
+
+•	walkingupstairs
+
+•	walkingdownstairs
+
+•	sitting
+
+•	standing
+
+•	laying
